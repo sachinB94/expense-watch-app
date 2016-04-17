@@ -1,0 +1,23 @@
+{
+  "name": "ExpenseWatch",
+  "author": "Sachin Bansal <sachinbansal94@gmail.com>",
+  "private": "true",
+  "devDependencies": {},
+  "dependencies": {
+    "ionic": "~1.1.0",
+    "angular": "~1.4.3",
+    "ngCordova": "~0.1.17-alpha",
+    "angular-resource": "~1.4.3",
+    "lodash": "~4.11.1",
+    "restangular": "~1.5.2",
+    "angular-local-storage": "~0.2.7",
+    "ionic-toast": "~0.2.0",
+    "ionic-datepicker": "~1.1.0",
+    "angular-nvd3": "~1.0.6",
+    "moment": "~2.12.0"
+  },
+  "resolutions": {
+    "angular": "1.4.3",
+    "lodash": "~4.11.1"
+  }
+}

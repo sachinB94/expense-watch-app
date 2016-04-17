@@ -1,0 +1,37 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-dark">
+    <button class="button button-icon icon ion-navicon" menu-toggle="left"></button>
+    <h1 class="title">Expense List</h1>
+  </ion-header-bar>
+  <!--  -->
+  <ion-content class="has-header">
+    <div class="row">
+      <div class="col col-20 input-label">
+        Sort by
+      </div>
+      <label class="col item item-input item-select">
+        <select ng-model="vm.sequenceMultiplier" ng-change="vm.sortExpenses()">
+          <option value="1">Asc</option>
+          <option value="-1">Desc</option>
+        </select>
+      </label>
+      <label class="col item item-input item-select">
+        <select ng-model="vm.sortField" ng-change="vm.sortExpenses()">
+          <option value="name">Name</option>
+          <option value="amount">Amount</option>
+          <option value="date" selected>Date</option>
+        </select>
+      </label>
+    </div>
+    <!--  -->
+    <div class="list">
+      <div ng-repeat="expense in vm.expenses" class="item item-icon-left item-icon-right row" ng-class="{ 'cash': expense.type === 'cash', 'credit': expense.type === 'credit'}">
+        <div class="col col-10 text-center"><i class="icon ion-edit" style="font-size:20px" ng-click="vm.editExpense(expense)"></i></div>
+        <div class="col text-center"><strong> {{ expense.name }} </strong></div>
+        <div class="col text-center">&#8377; {{ expense.amount }}</div>
+        <div class="col text-center">{{ expense.formattedDate }}</div>
+        <div class="col col-10 text-center"><i class="icon ion-close-round" style="font-size:20px"  ng-click="vm.deleteExpense(expense)"></i></div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

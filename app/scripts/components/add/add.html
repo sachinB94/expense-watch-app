@@ -1,0 +1,40 @@
+<ion-view>
+  <ion-header-bar align-title="center" class="bar-dark">
+    <button class="button button-icon icon ion-navicon" menu-toggle="left"></button>
+    <h1 class="title">Home</h1>
+  </ion-header-bar>
+  <!--  -->
+  <ion-content class="has-header">
+    <h3 class="text-center padding">Add Expense</h3>
+    <div class="list list-inset">
+      <form ng-submit="vm.addExpense()">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Name</span>
+          <input type="text" placeholder="Name" ng-model="vm.expense.name">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Category</span>
+          <input type="text" placeholder="Category" ng-model="vm.expense.category">
+        </label>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Type
+          </div>
+          <select ng-model="vm.expense.type">
+            <option ng-repeat="type in vm.EXPENSE_TYPE" value="{{ type }}"> {{ type }} </option>
+          </select>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Amount</span>
+          <input type="number" placeholder="Amount" ng-model="vm.expense.amount">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Date</span>
+          <input type="date" placeholder="Date" ng-click="vm.openDatePicker()" ng-model="vm.expense.date">
+        </label>
+        <button class="button button-block button-positive">
+          Submit
+        </button>
+      </form>
+  </ion-content>
+</ion-view>

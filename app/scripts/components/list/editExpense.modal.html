@@ -1,0 +1,40 @@
+<ion-modal-view>
+  <ion-content>
+    <h3 class="text-center padding">Edit expense</h3>
+    <div class="list list-inset">
+      <form ng-submit="vm.addExpense()">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Name</span>
+          <input type="text" placeholder="Name" ng-model="vm.expense.name">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Category</span>
+          <input type="text" placeholder="Category" ng-model="vm.expense.category">
+        </label>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Type
+          </div>
+          <select ng-model="vm.expense.type">
+            <option ng-repeat="type in vm.EXPENSE_TYPE" value="{{ type }}" ng-selected="{{ vm.expense.type === type }}"> {{ type }} </option>
+          </select>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Amount</span>
+          <input type="number" placeholder="Amount" ng-model="vm.expense.amount">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Date</span>
+          <input type="date" placeholder="Date" ng-click="vm.openDatePicker()" ng-model="vm.expense.date">
+        </label>
+        <div class="button-bar">
+          <button ng-click="vm.closeEditExpenseModal('submit', vm.expense)" class="col button button-block button-positive" style="margin-right: 5px;">
+            Submit
+          </button>
+          <button ng-click="vm.closeEditExpenseModal('cancel', vm.expense)" class="col button button-block button-stable" style="margin-left: 5px;">
+            Cancel
+          </button>
+        </div>
+      </form>
+  </ion-content>
+</ion-modal-view>
