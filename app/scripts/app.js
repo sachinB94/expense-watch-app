@@ -89,6 +89,15 @@ angular.module('ExpenseWatch', ['ionic', 'ionic-toast', 'ngCordova', 'ngResource
             controller: 'ListController as vm'
           }
         }
+      }).state('app.about', {
+        url: '/about',
+        cache: false,
+        views: {
+          'viewContent': {
+            templateUrl: 'scripts/components/about/about.html',
+            controller: 'AboutController as vm'
+          }
+        }
       });
 
 

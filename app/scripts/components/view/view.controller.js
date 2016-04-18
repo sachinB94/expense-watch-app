@@ -45,9 +45,9 @@ angular.module('ExpenseWatch')
       var categoryChartData = calculateMultiBarChartData('category', expenses);
 
       if (dateChartData[0].values.length > categoryChartData[0].values.length) {
-        return dateChartData[0].values.length * 60;
+        return dateChartData[0].values.length * 150;
       } else {
-        return categoryChartData[0].values.length * 60;
+        return categoryChartData[0].values.length * 150;
       }
     }
 

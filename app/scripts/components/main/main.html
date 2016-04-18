@@ -1,39 +1,32 @@
-<ion-side-menus>
-    <!-- Center content -->
-    <ion-side-menu-content>
-
-        <ion-nav-view name="viewContent">
-
-        </ion-nav-view>
-    </ion-side-menu-content>
-
-    <!-- Left menu -->
-    <ion-side-menu side="left" class="side-menu">
-
-        <!-- <ion-header-bar align-title="center" class="bar-dark">
-            <h1 class="title">Side Menu</h1>
-        </ion-header-bar> -->
-
-        <!-- <ion-content class="has-header"> -->
-        <ion-content>
-            <div class="list">
-                <a ng-show="vm.isAuthorized" menu-close class="item item-icon-left" ui-sref-active="active" ui-sref="app.add">
-                    <i class="icon ion-plus-round"></i>
-                    Add Expense
-                </a>
-                <a ng-show="vm.isAuthorized" menu-close class="item item-icon-left" ui-sref-active="active" ui-sref="app.view">
-                    <i class="icon ion-eye"></i>
-                    View Expenses
-                </a>
-                <a ng-show="vm.isAuthorized" menu-close class="item item-icon-left" ui-sref-active="active" ui-sref="app.list">
-                    <i class="icon ion-ios-list"></i>
-                    List Expenses
-                </a>
-                <a ng-show="vm.isAuthorized" menu-close class="item item-icon-left" ui-sref-active="active" ng-click="vm.logout()">
-                    <i class="icon ion-log-out"></i>
-                    Logout
-                </a>
-            </div>
-        </ion-content>
-    </ion-side-menu>
+<ion-side-menus enable-menu-with-back-views="true">
+  <!-- Center content -->
+  <ion-side-menu-content>
+    <ion-nav-view name="viewContent">
+    </ion-nav-view>
+  </ion-side-menu-content>
+  <!-- Left menu -->
+  <ion-side-menu side="left" class="side-menu">
+    <ion-content>
+      <div class="list">
+        <a ng-hide="vm.isAuthorized" menu-close class="item item-icon-left" ui-sref-active="active" ui-sref="app.login">
+          <i class="icon ion-log-in"></i> Login
+        </a>
+        <a ng-show="vm.isAuthorized" menu-close class="item item-icon-left" ui-sref-active="active" ui-sref="app.add">
+          <i class="icon ion-plus-round"></i> Add Expense
+        </a>
+        <a ng-show="vm.isAuthorized" menu-close class="item item-icon-left" ui-sref-active="active" ui-sref="app.view">
+          <i class="icon ion-eye"></i> View Expenses
+        </a>
+        <a ng-show="vm.isAuthorized" menu-close class="item item-icon-left" ui-sref-active="active" ui-sref="app.list">
+          <i class="icon ion-ios-list"></i> List Expenses
+        </a>
+        <a menu-close class="item item-icon-left" ui-sref-active="active" ui-sref="app.about">
+          <i class="icon ion-information"></i> About us
+        </a>
+        <a ng-show="vm.isAuthorized" menu-close class="item item-icon-left" ui-sref-active="active" ng-click="vm.logout()">
+          <i class="icon ion-log-out"></i> Logout
+        </a>
+      </div>
+    </ion-content>
+  </ion-side-menu>
 </ion-side-menus>

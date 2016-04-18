@@ -7,7 +7,7 @@
  * # MainController
  */
 angular.module('ExpenseWatch')
-  .controller('MainController', function($scope, $rootScope, $state, StorageService) {
+  .controller('MainController', function($scope, $rootScope, $state, StorageService, $ionicLoading) {
 
     var vm = this;
 
@@ -19,6 +19,14 @@ angular.module('ExpenseWatch')
         vm.isAuthorized = true;
       }
     })();
+
+    $scope.$on('$ionicView.beforeLeave', function() {
+      $ionicLoading.show();
+    });
+
+    $scope.$on('$ionicView.afterEnter', function() {
+      $ionicLoading.hide();
+    });
 
     $scope.$on('state:authorize:changed', function(event, data) {
       vm.isAuthorized = data.isAuthorized;
