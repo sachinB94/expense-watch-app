@@ -3,7 +3,7 @@
     <button class="button button-icon icon ion-navicon" menu-toggle="left"></button>
     <h1 class="title">Expense Watch</h1>
   </ion-header-bar>
-  
+  <!--  -->
   <div class="tabs-striped tabs-top tabs-background-dark tabs-color-light">
     <div class="tabs">
       <a class="tab-item" ng-class="{ 'active': vm.loginActive }" ng-click="vm.showLogin()">
@@ -14,43 +14,42 @@
         </a>
     </div>
   </div>
-
-<ion-content class="has-header" style="margin-top:50px">
-  <div ng-show="vm.loginActive" class="list list-inset">
-    <form ng-submit="vm.login()">
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">Email</span>
-        <input type="email" placeholder="Email" ng-model="vm.loginUser.email">
-      </label>
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">Password</span>
-        <input type="password" placeholder="Password" ng-model="vm.loginUser.password">
-      </label>
-      <button class="button button-block button-positive">
-        Submit
-      </button>
-    </form>
-  </div>
-
-  <div ng-hide="vm.loginActive" class="list list-inset">
-    <form ng-submit="vm.signup()">
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">Name</span>
-        <input type="text" placeholder="Name" ng-model="vm.signupUser.name">
-      </label>
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">Email</span>
-        <input type="email" placeholder="Email" ng-model="vm.signupUser.email">
-      </label>
-      <label class="item item-input item-stacked-label">
-        <span class="input-label">Password</span>
-        <input type="password" placeholder="Password" ng-model="vm.signupUser.password">
-      </label>
-      <button class="button button-block button-positive">
-        Submit
-      </button>
-    </form>
-  </div>
-</ion-content>
-
+  <!--  -->
+  <ion-content class="has-header" style="margin-top:50px">
+    <div ng-show="vm.loginActive" class="list list-inset">
+      <form ng-submit="vm.login()">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Email</span>
+          <input type="email" placeholder="Email" ng-model="vm.loginUser.email">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Password</span>
+          <input type="password" placeholder="Password" ng-model="vm.loginUser.password">
+        </label>
+        <button class="button button-block button-positive">
+          Submit
+        </button>
+      </form>
+    </div>
+    <!--  -->
+    <div ng-hide="vm.loginActive" class="list list-inset">
+      <form ng-submit="vm.signup()">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Name</span>
+          <input type="text" placeholder="Name" ng-model="vm.signupUser.name">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Email</span>
+          <input type="email" placeholder="Email" ng-model="vm.signupUser.email">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label">Password</span>
+          <input type="password" placeholder="Password" ng-model="vm.signupUser.password">
+        </label>
+        <button class="button button-block button-positive">
+          Submit
+        </button>
+      </form>
+    </div>
+  </ion-content>
 </ion-view>

@@ -1,11 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc function
- * @name ExpenseWatch.controller:MainController
- * @description
- * # MainController
- */
 angular.module('ExpenseWatch')
   .controller('MainController', function($scope, $rootScope, $state, StorageService, $ionicLoading) {
 

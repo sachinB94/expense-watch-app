@@ -1,15 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name ExpenseWatch
- * @description
- * # Initializes main application and routing
- *
- * Main module of the application.
- */
-
-
 angular.module('ExpenseWatch', ['ionic', 'ionic-toast', 'ngCordova', 'ngResource', 'restangular', 'LocalStorageModule', 'ionic-datepicker', 'nvd3'])
 
   .run(function($ionicPlatform) {
